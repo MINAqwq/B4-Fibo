@@ -23,6 +23,8 @@ ST		; write 1 to addr 2
 LDI $0, %A
 LDI $1, %B
 
+; set carry 1 and jump to page 1
+CMP B
 JPC B, loop
 
 ; to be sure we can jump back later, we need to pad loop to the next page (0x10)
